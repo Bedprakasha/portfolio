@@ -103,12 +103,14 @@ margin: 30px 0px;
     border-radius: 50%;
     color: green;
     font-size: 20px;
-    transition: .5s;
+    transition: transform .5s;
 }
 .social a:hover{
     background: greenyellow;
     color:green;
     box-shadow: 0 0 10px green;
+
+    transform: translate(5px,-5px);
 }
 
 .img{
@@ -162,7 +164,13 @@ margin-left: 170px;
     object-fit: cover;
     flex-basis: wrap;
     border-radius: 10%;
+    transition: transform .5s;
     
+}
+.image img:hover{
+    transform: translate(50px,-50px);
+    
+
 }
 .tab{
     display: flex;
@@ -260,6 +268,7 @@ margin-left: 170px;
     color:rgb(210, 44, 85) ;
 }
  .cv{
+
    
     margin-top: 50px !important;
     margin-left: 40px;
@@ -268,7 +277,7 @@ margin-left: 170px;
     border: 2px solid green;
     background: green;
     color: black;
-     padding-left:20px;
+    padding-left:20px;
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -316,4 +325,106 @@ background-color:rgb(210, 44, 85) ;
     color: crimson;
     margin-top: -20px;
     display: block;
+}
+
+
+/* -----------------css for small screen */
+@media only screen and (max-width: 600px) {
+    /* Adjust the navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Main section */
+    .img {
+        height: 150px;
+        width: 150px;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50px;
+    }
+    .home-info h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .home-info h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .home-info p {
+        font-size: 12px;
+        text-align: center;
+    }
+    .d {
+        font-size: 12px;
+        height: auto;
+        padding: 5px 10px;
+    }
+    .main {
+        padding: 50px 15px;
+    }
+
+    /* About section */
+    .about-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .image img {
+        height: 200px;
+        width: 150px;
+    }
+    .kk h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    .kk p {
+        margin: 10px;
+    }
+
+    /* Tabs */
+    .tab {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tab .tab-links {
+        margin: 5px 0;
+    }
+
+    /* Services section */
+    .servicelist {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+    .servicelist div {
+        height: auto;
+        width: auto;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Contact section */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    form input, form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    form .btn2 {
+        font-size: 14px;
+        width: auto;
+        padding: 5px 15px;
+    }
 }
